@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrimonio Cultural - Rutas del Patrimonio Chileno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="text-center py-4">
+        <h1>Patrimonio Cultural</h1>
+        <p class="lead">Selecciona un elemento para consultar su ficha informativa.</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Memoria Viva</a>
+            <div class="collapse navbar-collapse show">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="natural.html">Patrimonio Natural</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="cultural.html">Patrimonio Cultural</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container my-4" style="max-width: 500px;">
+        <article class="text-center mb-4">
+            <a href="rapa-nui.html" class="text-decoration-none">
+                <img src="img/rapa-nui.jpg" class="patrimonio-img" alt="Rapa Nui">
+                <h3>Rapa Nui</h3>
+            </a>
+        </article>
+        <article class="text-center mb-4">
+            <a href="valparaiso.html" class="text-decoration-none">
+                <img src="img/valparaiso.jpg" class="patrimonio-img" alt="Valparaíso">
+                <h3>Valparaíso</h3>
+            </a>
+        </article>
+        <article class="text-center mb-4">
+            <a href="fiestas-costumbristas.html" class="text-decoration-none">
+                <img src="img/fiestas-costumbristas.jpg" class="patrimonio-img" alt="Fiestas Costumbristas">
+                <h3>Fiestas Costumbristas</h3>
+            </a>
+        </article>
+    </section>
+
+    <style>
+        .patrimonio-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    </style>
+
+    <footer class="text-center py-3">
+        <p><a href="index.html">Volver al inicio</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
