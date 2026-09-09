@@ -4,9 +4,9 @@ Sitio web desarrollado para la actividad semestral "Páginas básicas y versiona
 
 # Estructura del sitio
 
-- `index.html` — Página principal: título, descripción de la fundación, equipo responsable y accesos a las 2 categorías.
-- `natural.html` / `cultural.html` — Listado de elementos patrimoniales de cada categoría, cada uno enlaza a su ficha.
-- Fichas individuales (`torres-del-paine.html`, `atacama.html`, `fray-jorge.html`, `rapa-nui.html`, `valparaiso.html`, `fiestas-costumbristas.html`) — Imagen y datos de cada elemento: región, comuna, tipo de patrimonio, año de declaración y estado de conservación.
+- `index.html` - Página principal: título, descripción de la fundación, equipo responsable y accesos a las 2 categorías.
+- `natural.html` / `cultural.html` - Listado de elementos patrimoniales de cada categoría, cada uno enlaza a su ficha.
+- Fichas individuales (`torres-del-paine.html`, `atacama.html`, `fray-jorge.html`, `rapa-nui.html`, `valparaiso.html`, `fiestas-costumbristas.html`) - Imagen y datos de cada elemento: región, comuna, tipo de patrimonio, año de declaración y estado de conservación.
 - Cada página incluye navegación de vuelta a su categoría y/o al inicio.
 
 # Tecnologías usadas
