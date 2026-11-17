@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atención al cliente - Rutas del Patrimonio Chileno</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="text-center py-4">
+        <h1>Atención al cliente</h1>
+        <p class="lead">Cuéntanos tu sugerencia, consulta o comentario.</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Memoria Viva</a>
+            <div class="collapse navbar-collapse show">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="natural.html">Patrimonio Natural</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cultural.html">Patrimonio Cultural</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Atención al cliente</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección: formulario. Al enviarlo, lleva a gracias.html (no se guarda ni se envía nada real) -->
+    <section class="container my-4" style="max-width: 600px;">
+        <form action="gracias.html" method="get">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo" name="correo" required
+                pattern="[^@\s]+@[^@\s]+\.[A-Za-z]{2,}"
+                title="Ingresa un correo completo, por ejemplo: nombre@gmail.com">
+            </div>
+
+            <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo de mensaje</label>
+                <select class="form-select" id="tipo" name="tipo">
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="felicitacion">Felicitación</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="text-center py-3">
+        <p><a href="index.html">Volver al inicio</a></p>
+        <p class="text-muted small">Sitio ficticio con fines académicos. Los nombres y la fundación no corresponden a personas ni instituciones reales.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
