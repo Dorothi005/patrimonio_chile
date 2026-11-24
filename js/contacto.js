@@ -21,10 +21,19 @@ formulario.addEventListener("submit", function (evento) {
     }
 
     try {
-        Datos.crear(Negocio.armarSugerencia(datos));
-        formulario.reset();
-        Vista.mostrarAviso("success", "Su formulario se envió con éxito.");
-    } catch (error) {
+
+    Datos.crear(Negocio.armarSugerencia(datos));
+
+    formulario.reset();
+
+    Vista.mostrarAviso("success", "Su formulario se envió con éxito.");
+
+    setTimeout(() => {
+        window.location.href = "gracias.html";
+    }, 2000);
+
+} catch (error) {
+    
         console.error("No se pudo guardar en localStorage:", error);
         Vista.mostrarAviso("danger", "No se pudo guardar el formulario. Intenta de nuevo.");
     }
