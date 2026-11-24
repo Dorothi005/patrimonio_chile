@@ -3,7 +3,7 @@
 const formulario = document.getElementById("formulario");
 
 formulario.addEventListener("submit", function (evento) {
-    // Frenamos el envío normal para validar y guardar nosotros
+    // Frenamos el envío normal para validar y guardar
     evento.preventDefault();
 
     const datos = Vista.leerCampos("");
