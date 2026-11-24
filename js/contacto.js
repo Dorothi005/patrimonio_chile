@@ -1,27 +1,35 @@
+// CONTROLADOR de contacto.html: CREATE (ingreso de datos)
+
 const formulario = document.getElementById("formulario");
 
 formulario.addEventListener("submit", function (evento) {
-    // Evita el envío normal del formulario para guardar primero los datos
+    // Frenamos el envío normal para validar y guardar nosotros
     evento.preventDefault();
 
-    const sugerencia = {
-        nombre: document.getElementById("nombre").value.trim(),
-        correo: document.getElementById("correo").value.trim(),
-        tipo: document.getElementById("tipo").value,
-        mensaje: document.getElementById("mensaje").value.trim(),
-        fecha: new Date().toLocaleString("es-CL")
-    };
+    const datos = Vista.leerCampos("");
+    const errores = Negocio.validar(datos);
+    Vista.mostrarErrores("", errores);
+
+    if (Object.keys(errores).length > 0) {
+        Vista.mostrarAviso("danger", "Revisa los campos marcados en rojo.");
+        return;
+    }
+
+    if (Negocio.esDuplicado(Datos.obtenerTodas(), datos, null)) {
+        Vista.mostrarAviso("warning", "Ya recibimos un mensaje idéntico con este correo.");
+        return;
+    }
 
     try {
-        // Lee lo que ya estaba guardado (o una lista vacía si no hay nada)
-        const sugerencias = JSON.parse(localStorage.getItem("sugerencias")) || [];
-        sugerencias.push(sugerencia);
-        localStorage.setItem("sugerencias", JSON.stringify(sugerencias));
-
-        // Redirige a la página de agradecimiento
-        window.location.href = "gracias.html";
+        Datos.crear(Negocio.armarSugerencia(datos));
+        formulario.reset();
+        Vista.mostrarAviso("success", "Su formulario se envió con éxito.");
     } catch (error) {
         console.error("No se pudo guardar en localStorage:", error);
-        alert("No se pudo guardar el formulario. Intenta de nuevo.");
+        Vista.mostrarAviso("danger", "No se pudo guardar el formulario. Intenta de nuevo.");
     }
+});
+
+formulario.addEventListener("input", function (evento) {
+    evento.target.classList.remove("is-invalid");
 });
